@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ندى نايف | استشارات السوشيال ميديا</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FAF7F2;
+    --ash:#DCD6CE;
+    --walnut:#7D7369;
+    --coffee:#251F1B;
+    --coffee-soft:#3A332D;
+    --nd-dark:#0B2528;
+    --nd-green:#3B8750;
+    --nd-vision:#7C5D21;
+    --nd-courage:#607C4F;
+    --nd-determination:#971A4D;
+    --nd-authenticity:#5ABA1C;
+    --nd-generosity:#0050AF;
+    --nd-giving:#6565E0;
+  }
+
+  *{box-sizing:border-box; margin:0; padding:0;}
+
+  html{scroll-behavior:smooth;}
+
+  body{
+    background:var(--paper);
+    color:var(--coffee);
+    font-family:'IBM Plex Sans Arabic', sans-serif;
+    font-weight:400;
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  h1,h2,h3,h4{
+    font-family:'IBM Plex Sans Arabic', sans-serif;
+    color:var(--coffee);
+  }
+
+  a{color:inherit;}
+
+  /* ===== Hero ===== */
+  .hero{
+    max-width:640px;
+    margin:0 auto;
+    padding:110px 24px 90px;
+    text-align:center;
+  }
+  .hero .eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    font-size:0.85rem;
+    color:var(--walnut);
+    margin-bottom:10px;
+  }
+  .hero .eyebrow::before,
+  .hero .eyebrow::after{
+    content:"";
+    width:20px; height:1px;
+    background:var(--walnut);
+  }
+  .hero .credentials{
+    font-size:0.82rem;
+    color:var(--walnut);
+    max-width:420px;
+    margin:0 auto 26px;
+    line-height:1.6;
+  }
+  .hero h1{
+    font-size:clamp(2.4rem, 5.5vw, 3.2rem);
+    font-weight:600;
+    letter-spacing:-0.5px;
+  }
+  .hero p.lede{
+    max-width:460px;
+    margin:22px auto 0;
+    font-size:1.05rem;
+    color:var(--coffee-soft);
+  }
+
+  /* ===== Section shell ===== */
+  section{
+    max-width:1120px;
+    margin:0 auto;
+    padding:20px 24px 100px;
+  }
+  .section-head{
+    text-align:center;
+    margin-bottom:56px;
+  }
+  .discount-badge{
+    display:inline-block;
+    background:var(--nd-green);
+    color:var(--paper);
+    font-size:0.72rem;
+    font-weight:600;
+    padding:4px 10px;
+    border-radius:12px;
+    margin-top:12px;
+  }
+  .old-price{
+    color:var(--walnut);
+    text-decoration:line-through;
+    font-size:0.95rem;
+    opacity:0.75;
+  }
+
+  .nd-banner{
+    max-width:1120px;
+    margin:0 auto 8px;
+    background:var(--nd-dark);
+    background-image:
+      linear-gradient(rgba(59,135,80,0.18) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(59,135,80,0.18) 1px, transparent 1px);
+    background-size:28px 28px;
+    border-radius:14px;
+    padding:32px 32px;
+    position:relative;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    flex-wrap:wrap;
+  }
+  .nd-banner .tag-96{
+    position:absolute;
+    top:18px; left:18px;
+    background:var(--nd-green);
+    color:var(--paper);
+    font-weight:700;
+    font-size:1.15rem;
+    padding:6px 14px;
+    border-radius:4px;
+    z-index:1;
+  }
+  .nd-banner .corner-label{
+    position:absolute;
+    top:22px; right:24px;
+    color:rgba(250,247,242,0.35);
+    font-size:0.68rem;
+    letter-spacing:1.5px;
+    z-index:1;
+  }
+  .nd-banner-text{ position:relative; z-index:1; color:var(--paper); margin-top:30px; }
+  .nd-banner-text .slogan{
+    font-size:1.2rem;
+    font-weight:700;
+    display:block;
+  }
+  .nd-banner-text .sub{
+    font-size:0.86rem;
+    color:rgba(250,247,242,0.7);
+    margin-top:4px;
+    display:block;
+  }
+  .nd-banner-cta{
+    position:relative;
+    z-index:1;
+    background:var(--nd-green);
+    color:var(--paper);
+    border:none;
+    padding:12px 22px;
+    border-radius:8px;
+    font-family:'IBM Plex Sans Arabic', sans-serif;
+    font-size:0.9rem;
+    font-weight:700;
+    cursor:pointer;
+    white-space:nowrap;
+    transition:transform 0.15s ease, background 0.2s ease;
+    margin-top:30px;
+  }
+  .nd-banner-cta:hover{ transform:translateY(-2px); background:#2f6f41; }
+
+  .countdown{
+    display:flex;
+    gap:10px;
+    margin-top:16px;
+  }
+  .cd-unit{
+    background:rgba(250,247,242,0.08);
+    border:1px solid rgba(250,247,242,0.18);
+    border-radius:8px;
+    padding:8px 12px;
+    text-align:center;
+    min-width:56px;
+  }
+  .cd-num{
+    display:block;
+    font-size:1.3rem;
+    font-weight:700;
+    color:var(--paper);
+    font-variant-numeric:tabular-nums;
+  }
+  .cd-label{
+    display:block;
+    font-size:0.68rem;
+    color:rgba(250,247,242,0.6);
+    margin-top:2px;
+  }
+
+  .promo-caption{
+    display:block;
+    text-align:center;
+    font-size:0.85rem;
+    color:var(--nd-green);
+    font-weight:600;
+    height:1.4em;
+    margin:16px 0 4px;
+    opacity:0;
+    transform:translateY(4px);
+    transition:opacity 0.35s ease, transform 0.35s ease;
+  }
+  .promo-caption.show{ opacity:1; transform:translateY(0); }
+
+  .confetti-piece{
+    position:fixed;
+    top:-20px;
+    z-index:9999;
+    pointer-events:none;
+    border-radius:2px;
+    animation:confetti-fall linear forwards;
+  }
+  @keyframes confetti-fall{
+    to{
+      transform:translateY(105vh) rotate(540deg);
+      opacity:0.15;
+    }
+  }
+  .section-head h2{
+    font-size:1.9rem;
+    font-weight:600;
+  }
+  .section-head p{
+    color:var(--walnut);
+    margin-top:10px;
+    font-size:0.98rem;
+  }
+
+  /* ===== Packages grid ===== */
+  .cards-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:28px;
+    align-items:stretch;
+  }
+  .card{
+    background:#ffffff;
+    border:1px solid var(--ash);
+    border-radius:14px;
+    padding:38px 32px;
+    display:flex;
+    flex-direction:column;
+    position:relative;
+    box-shadow:0 1px 2px rgba(37,31,27,0.04);
+    transition:transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  }
+  .card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 16px 32px -12px rgba(37,31,27,0.16);
+    border-color:var(--walnut);
+  }
+
+  .card.featured{
+    border:1.5px solid var(--coffee);
+    box-shadow:0 16px 36px -14px rgba(37,31,27,0.22);
+  }
+  .card.featured:hover{ transform:translateY(-6px); }
+
+  .card.unavailable{
+    background:#FBFAF8;
+  }
+  .card.unavailable:hover{
+    transform:none;
+    box-shadow:0 1px 2px rgba(37,31,27,0.04);
+    border-color:var(--ash);
+  }
+  .card.unavailable h3,
+  .card.unavailable .desc,
+  .card.unavailable ul li{
+    opacity:0.6;
+  }
+  .card.unavailable .price-row .amount,
+  .card.unavailable .old-price{
+    opacity:0.55;
+  }
+
+  .badge{
+    position:absolute;
+    top:-13px;
+    right:32px;
+    background:var(--coffee);
+    color:var(--paper);
+    font-size:0.72rem;
+    padding:5px 14px;
+    border-radius:20px;
+    font-weight:600;
+  }
+  .badge.unavailable-badge{
+    background:#B3261E;
+  }
+
+  .card .tier-label{
+    font-size:0.78rem;
+    color:var(--walnut);
+    font-weight:500;
+  }
+  .card h3{
+    font-size:1.4rem;
+    font-weight:600;
+    margin-top:8px;
+    line-height:1.4;
+  }
+  .card .subtitle{
+    font-size:0.9rem;
+    color:var(--walnut);
+    margin-top:8px;
+  }
+
+  .price-row{
+    margin-top:26px;
+    padding-top:26px;
+    border-top:1px solid var(--ash);
+    display:flex;
+    flex-wrap:wrap;
+    align-items:baseline;
+    gap:8px;
+  }
+  .price-row .amount{
+    font-size:2rem;
+    font-weight:600;
+    color:var(--coffee);
+  }
+  .price-row .unit{
+    font-size:0.85rem;
+    color:var(--walnut);
+  }
+
+  .card .desc{
+    margin-top:16px;
+    font-size:0.92rem;
+    color:var(--coffee-soft);
+  }
+
+  .card .includes-title{
+    font-size:0.78rem;
+    color:var(--walnut);
+    font-weight:600;
+    margin:28px 0 14px;
+  }
+  .card ul{
+    list-style:none;
+    font-size:0.89rem;
+    flex:1;
+  }
+  .card ul li{
+    position:relative;
+    padding-right:20px;
+    margin-bottom:11px;
+    color:var(--coffee-soft);
+  }
+  .card ul li::before{
+    content:"";
+    position:absolute;
+    right:0;
+    top:0.55em;
+    width:6px; height:6px;
+    border-radius:50%;
+    background:var(--walnut);
+  }
+
+  .select-btn{
+    margin-top:30px;
+    background:var(--paper);
+    border:1px solid var(--coffee);
+    color:var(--coffee);
+    padding:14px 18px;
+    border-radius:8px;
+    font-family:'IBM Plex Sans Arabic', sans-serif;
+    font-size:0.92rem;
+    font-weight:600;
+    cursor:pointer;
+    transition:background 0.2s ease, color 0.2s ease;
+  }
+  .select-btn:hover{
+    background:var(--coffee);
+    color:var(--paper);
+  }
+  .select-btn:disabled{
+    background:transparent;
+    border-color:var(--ash);
+    color:var(--walnut);
+    cursor:not-allowed;
+    opacity:0.7;
+  }
+  .select-btn:disabled:hover{
+    background:transparent;
+    color:var(--walnut);
+  }
+  .card.featured .select-btn{
+    background:var(--coffee);
+    color:var(--paper);
+  }
+  .card.featured .select-btn:hover{
+    background:var(--coffee-soft);
+  }
+  .card.chosen{
+    border-color:var(--coffee);
+    box-shadow:0 16px 36px -14px rgba(37,31,27,0.22);
+  }
+  .card.chosen .select-btn{ background:var(--coffee); color:var(--paper); }
+
+  /* ===== Payment ===== */
+  .payment-wrap{
+    background:var(--coffee);
+    color:var(--paper);
+  }
+  .payment-wrap .section-head h2,
+  .payment-wrap .section-head p{ color:var(--paper); }
+  .payment-wrap .section-head p{ opacity:0.6; }
+
+  .selected-line{
+    text-align:center;
+    margin-bottom:48px;
+    font-size:0.98rem;
+    opacity:0.85;
+  }
+  .selected-line span{
+    display:inline-block;
+    border-bottom:1px solid var(--ash);
+    padding-bottom:3px;
+    font-weight:600;
+    opacity:1;
+  }
+
+  .payment-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:24px;
+    align-items:start;
+  }
+
+  .steps-track{
+    max-width:640px;
+    margin:0 auto 44px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .step{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:8px;
+    min-width:88px;
+  }
+  .step-circle{
+    width:34px; height:34px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:rgba(250,247,242,0.08);
+    border:1px solid rgba(250,247,242,0.25);
+    color:rgba(250,247,242,0.5);
+    font-weight:700;
+    font-size:0.9rem;
+    transition:background 0.3s ease, border-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  }
+  .step-text{
+    font-size:0.76rem;
+    color:rgba(250,247,242,0.45);
+    transition:color 0.3s ease;
+    text-align:center;
+  }
+  .step-line{
+    flex:1;
+    height:1px;
+    background:rgba(250,247,242,0.18);
+    margin:0 6px 26px;
+    max-width:70px;
+    position:relative;
+  }
+  .step.active .step-circle{
+    background:var(--nd-green);
+    border-color:var(--nd-green);
+    color:var(--paper);
+    transform:scale(1.08);
+  }
+  .step.active .step-text{ color:var(--paper); font-weight:600; }
+  .step.done .step-circle{
+    background:var(--nd-green);
+    border-color:var(--nd-green);
+    color:var(--paper);
+  }
+  .step.done .step-text{ color:rgba(250,247,242,0.8); }
+  .step-line.done{ background:var(--nd-green); }
+
+  .confirm-transfer{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    margin-top:18px;
+    padding-top:16px;
+    border-top:1px solid rgba(250,247,242,0.1);
+    font-size:0.86rem;
+    color:rgba(250,247,242,0.8);
+    cursor:pointer;
+  }
+  .confirm-transfer input{
+    width:16px; height:16px;
+    accent-color:var(--nd-green);
+    cursor:pointer;
+  }
+
+  .bank-card, .receipt-card{
+    background:rgba(250,247,242,0.04);
+    border:1px solid rgba(250,247,242,0.14);
+    border-radius:14px;
+    padding:32px;
+  }
+  .bank-card h3, .receipt-card h3{
+    color:var(--paper);
+    font-size:1.05rem;
+    font-weight:600;
+    margin-bottom:22px;
+  }
+  .bank-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:14px 0;
+    border-bottom:1px solid rgba(250,247,242,0.1);
+    font-size:0.92rem;
+    gap:12px;
+  }
+  .bank-row:first-of-type{ padding-top:0; }
+  .bank-row:last-child{ border-bottom:none; padding-bottom:0; }
+  .bank-row .label{ opacity:0.55; white-space:nowrap; font-size:0.85rem; }
+  .bank-row .value{
+    font-weight:600;
+    direction:ltr;
+    unicode-bidi:plaintext;
+    text-align:left;
+    word-break:break-all;
+  }
+  .copy-btn{
+    background:none;
+    border:1px solid rgba(250,247,242,0.3);
+    color:var(--paper);
+    font-size:0.72rem;
+    padding:6px 12px;
+    border-radius:6px;
+    cursor:pointer;
+    white-space:nowrap;
+    font-family:'IBM Plex Sans Arabic', sans-serif;
+    transition:background 0.2s ease;
+  }
+  .copy-btn:hover{ background:rgba(250,247,242,0.12); }
+  .copy-btn.copied{ background:var(--paper); color:var(--coffee); border-color:var(--paper); }
+
+  .receipt-card p.hint{ opacity:0.6; font-size:0.87rem; margin-bottom:22px; line-height:1.6; }
+
+  .file-drop{
+    border:1px dashed rgba(250,247,242,0.3);
+    border-radius:10px;
+    padding:28px;
+    text-align:center;
+    cursor:pointer;
+    position:relative;
+    transition:border-color 0.2s ease, background 0.2s ease;
+  }
+  .file-drop:hover{ border-color:rgba(250,247,242,0.55); background:rgba(250,247,242,0.03); }
+  .file-drop input{
+    position:absolute;
+    inset:0;
+    opacity:0;
+    cursor:pointer;
+  }
+  .file-drop .drop-label{ font-size:0.9rem; opacity:0.8; }
+  .file-drop .drop-sub{ font-size:0.78rem; opacity:0.45; margin-top:6px; }
+
+  #preview{
+    margin-top:16px;
+    display:none;
+    align-items:center;
+    gap:12px;
+    font-size:0.85rem;
+    background:rgba(250,247,242,0.06);
+    border-radius:8px;
+    padding:12px;
+  }
+  #preview img{
+    width:40px; height:40px;
+    border-radius:6px;
+    object-fit:cover;
+  }
+  #preview .filename{ opacity:0.85; word-break:break-all; }
+
+  .send-btn{
+    display:block;
+    width:100%;
+    box-sizing:border-box;
+    text-align:center;
+    margin-top:14px;
+    background:var(--paper);
+    color:var(--coffee);
+    padding:14px 18px;
+    border-radius:8px;
+    border:none;
+    text-decoration:none;
+    font-family:'IBM Plex Sans Arabic', sans-serif;
+    font-size:0.92rem;
+    font-weight:600;
+    cursor:pointer;
+    opacity:0.35;
+    pointer-events:none;
+    transition:opacity 0.2s ease, background 0.2s ease;
+  }
+  .send-btn.active{ opacity:1; pointer-events:auto; }
+  .send-btn.active:hover{ background:var(--ash); }
+  .send-btn.secondary{
+    background:transparent;
+    border:1px solid rgba(250,247,242,0.3);
+    color:var(--paper);
+  }
+  .send-btn.secondary.active:hover{ background:rgba(250,247,242,0.1); }
+  .send-btn.success{
+    background:var(--nd-green);
+    color:var(--paper);
+    opacity:1;
+    pointer-events:none;
+  }
+
+  .form-field{
+    margin-bottom:16px;
+  }
+  .form-field label{
+    display:block;
+    font-size:0.8rem;
+    color:rgba(250,247,242,0.6);
+    margin-bottom:6px;
+  }
+  .form-field input{
+    width:100%;
+    box-sizing:border-box;
+    background:rgba(250,247,242,0.06);
+    border:1px solid rgba(250,247,242,0.2);
+    border-radius:8px;
+    padding:11px 14px;
+    font-family:'IBM Plex Sans Arabic', sans-serif;
+    font-size:0.9rem;
+    color:var(--paper);
+  }
+  .form-field input::placeholder{ color:rgba(250,247,242,0.35); }
+  .form-field input:focus{
+    outline:none;
+    border-color:var(--nd-green);
+  }
+
+  .form-status{
+    font-size:0.8rem;
+    text-align:center;
+    margin-top:12px;
+    min-height:1.2em;
+    color:rgba(250,247,242,0.7);
+  }
+  .form-status.error{ color:#e0a0a0; }
+  .form-status.success{ color:#8fd39e; }
+
+  .edit-note{
+    font-size:0.74rem;
+    opacity:0.4;
+    margin-top:16px;
+    text-align:center;
+    line-height:1.6;
+  }
+
+  /* ===== Footer ===== */
+  footer{
+    text-align:center;
+    padding:56px 24px 64px;
+    font-size:0.85rem;
+    color:var(--walnut);
+  }
+
+  /* ===== Responsive ===== */
+  @media (max-width:900px){
+    .cards-grid{ grid-template-columns:1fr; }
+    .card.featured{ order:-1; }
+    .payment-grid{ grid-template-columns:1fr; }
+  }
+</style>
+</head>
+<body>
+
+  <header class="hero">
+    <span class="eyebrow">ندى نايف</span>
+    <p class="credentials">مُدربة ممارسة — خبرة 5 سنوات في تخطيط المحتوى والتسويق الاستراتيجي وإدارة المشاريع</p>
+    <h1>استشارات وإدارة وتحليل<br>حسابات السوشيال ميديا</h1>
+    <p class="lede">قبل أي خطة أو محتوى، لازم نفهم وضع حسابك بالأرقام. اختاري الباقة اللي تناسب مرحلتك، وأبدأ فيها من نفس يوم التحويل.</p>
+  </header>
+
+  <section class="packages" id="packages">
+    <div class="nd-banner">
+      <span class="tag-96">96</span>
+      <span class="corner-label">SAUDI NATIONAL DAY</span>
+      <div class="nd-banner-text">
+        <span class="slogan">عزّنا بطبعنا 🇸🇦</span>
+        <span class="sub">عرض اليوم الوطني — خصم يوصل لـ51% على الباقات</span>
+        <div class="countdown" id="countdown">
+          <div class="cd-unit"><span class="cd-num" id="cd-days">--</span><span class="cd-label">يوم</span></div>
+          <div class="cd-unit"><span class="cd-num" id="cd-hours">--</span><span class="cd-label">ساعة</span></div>
+          <div class="cd-unit"><span class="cd-num" id="cd-mins">--</span><span class="cd-label">دقيقة</span></div>
+          <div class="cd-unit"><span class="cd-num" id="cd-secs">--</span><span class="cd-label">ثانية</span></div>
+        </div>
+      </div>
+      <button class="nd-banner-cta" id="promoBtn" type="button">احتفلي معنا</button>
+    </div>
+    <span class="promo-caption" id="promoCaption">كل عام والمملكة وأهلها بخير 🌿</span>
+
+    <div class="section-head" style="margin-top:44px;">
+      <h2>الباقات</h2>
+      <p>ثلاث مستويات، من التشخيص السريع إلى المتابعة الكاملة</p>
+    </div>
+
+    <div class="cards-grid">
+
+      <article class="card" data-name="التحليل والتشخيص" data-price="550 ريال">
+        <span class="tier-label">تشخيص لمرة واحدة</span>
+        <h3>التحليل والتشخيص</h3>
+        <p class="subtitle">تقرير شامل + جلسة شرح</p>
+        <div class="price-row">
+          <span class="old-price">900 ريال</span>
+          <span class="amount">550 ريال</span>
+          <span class="unit">دفعة واحدة</span>
+        </div>
+        <span class="discount-badge">وفري 39%</span>
+        <p class="desc">مناسبة إذا تبين تفهمين وضع حسابك الحالي بالأرقام قبل أي التزام طويل.</p>
+        <p class="includes-title">وش بسويه بعد ما تختارين هذي الباقة</p>
+        <ul>
+          <li>تحليل أداء الحساب: نمو، تفاعل، وصول آخر 3–6 أشهر</li>
+          <li>تحليل المحتوى: أقوى وأضعف المنشورات وسبب كل واحد</li>
+          <li>تحليل الجمهور: الفئة العمرية، المكان، أوقات التواجد</li>
+          <li>مقارنة مع 2–3 منافسين</li>
+          <li>تقرير PDF بنقاط القوة والضعف والتوصيات</li>
+          <li>جلسة شرح النتائج (30–45 دقيقة)</li>
+        </ul>
+        <button class="select-btn">اختاري هذي الباقة</button>
+      </article>
+
+      <article class="card unavailable" data-name="الإدارة والتطوير الشهري" data-price="1700 ريال / شهرياً">
+        <span class="badge unavailable-badge">اكتمل العدد</span>
+        <span class="tier-label">متابعة شهرية</span>
+        <h3>الإدارة والتطوير الشهري</h3>
+        <p class="subtitle">استراتيجية + متابعة مستمرة</p>
+        <div class="price-row">
+          <span class="old-price">2,800 ريال</span>
+          <span class="amount">1,700 ريال</span>
+          <span class="unit">شهرياً</span>
+        </div>
+        <span class="discount-badge">وفري 39%</span>
+        <p class="desc">لعميل يبي متابعة مستمرة وتحسين تدريجي، مو تحليل لمرة وحدة وخلاص.</p>
+        <p class="includes-title">وش بسويه بعد ما تختارين هذي الباقة</p>
+        <ul>
+          <li>كل شي في باقة التحليل والتشخيص</li>
+          <li>استراتيجية محتوى شهرية بمحاور واضحة</li>
+          <li>تقويم نشر (Content Calendar) بأفكار وتوقيت مقترح</li>
+          <li>متابعة أسبوعية للأرقام وتعديل الخطة حسب الأداء</li>
+          <li>تقرير شهري مقارن بالشهر السابق</li>
+          <li>جلسة مراجعة شهرية</li>
+        </ul>
+        <button class="select-btn" disabled>غير متاحة حالياً</button>
+      </article>
+
+      <article class="card unavailable" data-name="الإدارة الشاملة" data-price="2700 ريال / شهرياً">
+        <span class="badge unavailable-badge">اكتمل العدد</span>
+        <span class="tier-label">إدارة شاملة</span>
+        <h3>الإدارة الشاملة</h3>
+        <p class="subtitle">استشارة استراتيجية دائمة</p>
+        <div class="price-row">
+          <span class="old-price">5,500 ريال</span>
+          <span class="amount">2,700 ريال</span>
+          <span class="unit">شهرياً</span>
+        </div>
+        <span class="discount-badge">وفري 51%</span>
+        <p class="desc">لعميل يبي حد يفكر له استراتيجياً باستمرار ويتابع القرارات الكبيرة أول بأول.</p>
+        <p class="includes-title">وش بسويه بعد ما تختارين هذي الباقة</p>
+        <ul>
+          <li>كل شي في باقة الإدارة والتطوير الشهري</li>
+          <li>خطة استراتيجية ربع سنوية موثقة بأهداف واضحة</li>
+          <li>تحليل تنافسي شهري مستمر</li>
+          <li>خطة أزمات جاهزة لأي انخفاض مفاجئ أو مشكلة</li>
+          <li>استشارات مفتوحة عبر واتساب طوال الشهر</li>
+          <li>جلسة استراتيجية شهرية (60 دقيقة)</li>
+        </ul>
+        <button class="select-btn" disabled>غير متاحة حالياً</button>
+      </article>
+
+    </div>
+  </section>
+
+  <div class="payment-wrap">
+    <section class="payment" id="payment">
+      <div class="section-head">
+        <h2>الدفع</h2>
+        <p>حوّلي المبلغ بالبيانات التالية، وارفقي إثبات التحويل تحت</p>
+      </div>
+
+      <p class="selected-line">الباقة المختارة: <span id="selected-package">لسا ما اخترتِ باقة</span></p>
+
+      <div class="steps-track" id="stepsTrack">
+        <div class="step" id="step1">
+          <span class="step-circle">١</span>
+          <span class="step-text">اختيار الباقة</span>
+        </div>
+        <div class="step-line"></div>
+        <div class="step" id="step2">
+          <span class="step-circle">٢</span>
+          <span class="step-text">تحويل المبلغ</span>
+        </div>
+        <div class="step-line"></div>
+        <div class="step" id="step3">
+          <span class="step-circle">٣</span>
+          <span class="step-text">إرفاق الإيصال</span>
+        </div>
+      </div>
+
+      <div class="payment-grid">
+
+        <div class="bank-card">
+          <h3>بيانات التحويل البنكي</h3>
+          <div class="bank-row">
+            <span class="label">البنك</span>
+            <span class="value">مصرف الراجحي</span>
+          </div>
+          <div class="bank-row">
+            <span class="label">اسم المستفيد</span>
+            <span class="value">ندى نايف</span>
+          </div>
+          <div class="bank-row">
+            <span class="label">رقم الحساب</span>
+            <span class="value" id="acc-value">335000010006086386688</span>
+            <button class="copy-btn" data-target="acc-value">نسخ</button>
+          </div>
+          <div class="bank-row">
+            <span class="label">الآيبان</span>
+            <span class="value" id="iban-value">SA7480000335608016386688</span>
+            <button class="copy-btn" data-target="iban-value">نسخ</button>
+          </div>
+          <label class="confirm-transfer">
+            <input type="checkbox" id="confirmTransfer">
+            <span>حوّلت المبلغ بالفعل</span>
+          </label>
+        </div>
+
+        <div class="receipt-card">
+          <h3>بيانات الطلب</h3>
+          <p class="hint">عبّي بياناتك، ارفقي الإيصال، ثم سجّلي الطلب.</p>
+
+          <div class="form-field">
+            <label for="customerName">الاسم</label>
+            <input type="text" id="customerName" placeholder="اسمك الكامل">
+          </div>
+          <div class="form-field">
+            <label for="customerPhone">رقم الجوال</label>
+            <input type="tel" id="customerPhone" placeholder="05XXXXXXXX">
+          </div>
+
+          <div class="file-drop">
+            <input type="file" id="receipt" accept="image/*,.pdf">
+            <p class="drop-label">اضغطي هنا لإرفاق صورة الإيصال</p>
+            <p class="drop-sub">JPG · PNG · PDF</p>
+          </div>
+
+          <div id="preview">
+            <img id="preview-img" style="display:none;">
+            <span class="filename" id="preview-name"></span>
+          </div>
+
+          <button class="send-btn active" id="submitOrderBtn" type="button">تسجيل الطلب</button>
+          <a href="#" class="send-btn secondary" id="whatsapp-send" target="_blank">إرسال الإيصال عبر واتساب</a>
+          <p class="form-status" id="formStatus"></p>
+        </div>
+
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    ندى نايف — استشارات وإدارة وتحليل حسابات السوشيال ميديا
+  </footer>
+
+<script>
+  const cards = document.querySelectorAll('.card');
+  const selectedLabel = document.getElementById('selected-package');
+  let chosenPackage = null;
+
+  cards.forEach(card => {
+    const btn = card.querySelector('.select-btn');
+    btn.addEventListener('click', () => {
+      cards.forEach(c => c.classList.remove('chosen'));
+      card.classList.add('chosen');
+      chosenPackage = { name: card.dataset.name, price: card.dataset.price };
+      selectedLabel.textContent = chosenPackage.name + ' — ' + chosenPackage.price;
+      document.getElementById('payment').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      updateWhatsappLink();
+      updateSteps();
+    });
+  });
+
+  // Copy buttons
+  document.querySelectorAll('.copy-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetId = btn.dataset.target;
+      const text = document.getElementById(targetId).textContent.trim();
+      navigator.clipboard.writeText(text).then(() => {
+        const original = btn.textContent;
+        btn.textContent = 'تم النسخ';
+        btn.classList.add('copied');
+        setTimeout(() => {
+          btn.textContent = original;
+          btn.classList.remove('copied');
+        }, 1500);
+      });
+    });
+  });
+
+  // File upload preview
+  const fileInput = document.getElementById('receipt');
+  const preview = document.getElementById('preview');
+  const previewImg = document.getElementById('preview-img');
+  const previewName = document.getElementById('preview-name');
+  let attachedFileName = null;
+  let receiptDataUrl = null;
+
+  fileInput.addEventListener('change', () => {
+    const file = fileInput.files[0];
+    if (!file) return;
+    attachedFileName = file.name;
+    preview.style.display = 'flex';
+    previewName.textContent = file.name;
+
+    const reader = new FileReader();
+    reader.onload = e => {
+      receiptDataUrl = e.target.result;
+      if (file.type.startsWith('image/')) {
+        previewImg.src = receiptDataUrl;
+        previewImg.style.display = 'block';
+      } else {
+        previewImg.style.display = 'none';
+      }
+    };
+    reader.readAsDataURL(file);
+    updateWhatsappLink();
+    updateSteps();
+  });
+
+  // WhatsApp send link
+  const WHATSAPP_NUMBER = '966537974728';
+  const whatsappBtn = document.getElementById('whatsapp-send');
+
+  function updateWhatsappLink() {
+    if (!chosenPackage) return;
+    whatsappBtn.classList.add('active');
+    let msg = `مرحباً ندى، حولت مبلغ باقة "${chosenPackage.name}" (${chosenPackage.price}).`;
+    if (attachedFileName) {
+      msg += ` جاهزة أرسل إيصال التحويل (${attachedFileName}) بالمحادثة.`;
+    } else {
+      msg += ' بجهز إيصال التحويل وبرسله بالمحادثة.';
+    }
+    whatsappBtn.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+  }
+  // National Day 96 celebration
+  const promoBtn = document.getElementById('promoBtn');
+  const promoCaption = document.getElementById('promoCaption');
+  const confettiColors = ['#3B8750', '#7C5D21', '#5ABA1C', '#FAF7F2'];
+  let captionTimeout;
+
+  function launchConfetti() {
+    const pieceCount = 46;
+    for (let i = 0; i < pieceCount; i++) {
+      const piece = document.createElement('div');
+      piece.className = 'confetti-piece';
+      const size = 6 + Math.random() * 6;
+      piece.style.width = size + 'px';
+      piece.style.height = (size * 0.4) + 'px';
+      piece.style.left = Math.random() * 100 + 'vw';
+      piece.style.background = confettiColors[Math.floor(Math.random() * confettiColors.length)];
+      piece.style.animationDuration = (2.2 + Math.random() * 1.6) + 's';
+      piece.style.transform = `rotate(${Math.random() * 360}deg)`;
+      document.body.appendChild(piece);
+      setTimeout(() => piece.remove(), 4200);
+    }
+  }
+
+  promoBtn.addEventListener('click', () => {
+    launchConfetti();
+    promoCaption.classList.add('show');
+    clearTimeout(captionTimeout);
+    captionTimeout = setTimeout(() => promoCaption.classList.remove('show'), 3200);
+  });
+
+  // Interactive step tracker
+  const step1 = document.getElementById('step1');
+  const step2 = document.getElementById('step2');
+  const step3 = document.getElementById('step3');
+  const stepLines = document.querySelectorAll('.step-line');
+  const confirmTransfer = document.getElementById('confirmTransfer');
+
+  function updateSteps() {
+    const packageChosen = !!chosenPackage;
+    const transferConfirmed = confirmTransfer.checked;
+    const receiptAttached = !!attachedFileName;
+
+    [step1, step2, step3].forEach(s => s.classList.remove('active', 'done'));
+    stepLines.forEach(l => l.classList.remove('done'));
+
+    if (packageChosen) step1.classList.add('done');
+    else step1.classList.add('active');
+
+    if (packageChosen && !transferConfirmed) step2.classList.add('active');
+    if (transferConfirmed) { step2.classList.add('done'); stepLines[0].classList.add('done'); }
+    else if (packageChosen) { stepLines[0].classList.add('done'); }
+
+    if (transferConfirmed && !receiptAttached) step3.classList.add('active');
+    if (receiptAttached) { step3.classList.add('done'); stepLines[1].classList.add('done'); }
+    else if (transferConfirmed) { stepLines[1].classList.add('done'); }
+  }
+
+  confirmTransfer.addEventListener('change', updateSteps);
+  updateSteps();
+
+  // Live countdown to National Day 96 (23 Sep 2026)
+  const targetDate = new Date('2026-09-23T00:00:00+03:00').getTime();
+  const cdDays = document.getElementById('cd-days');
+  const cdHours = document.getElementById('cd-hours');
+  const cdMins = document.getElementById('cd-mins');
+  const cdSecs = document.getElementById('cd-secs');
+
+  function pad(n) { return String(n).padStart(2, '0'); }
+
+  function tickCountdown() {
+    const now = Date.now();
+    const diff = targetDate - now;
+    if (diff <= 0) {
+      cdDays.textContent = '00';
+      cdHours.textContent = '00';
+      cdMins.textContent = '00';
+      cdSecs.textContent = '00';
+      return;
+    }
+    const days = Math.floor(diff / 86400000);
+    const hours = Math.floor((diff % 86400000) / 3600000);
+    const mins = Math.floor((diff % 3600000) / 60000);
+    const secs = Math.floor((diff % 60000) / 1000);
+    cdDays.textContent = pad(days);
+    cdHours.textContent = pad(hours);
+    cdMins.textContent = pad(mins);
+    cdSecs.textContent = pad(secs);
+  }
+
+  tickCountdown();
+  setInterval(tickCountdown, 1000);
+
+  // Submit order to Google Sheet (via Google Apps Script Web App)
+  const SHEET_WEBAPP_URL = 'https://script.google.com/macros/s/AKfycbz-jKX_LGPmioOs4vWHtO_oiq5L95bykZ8jCROchxnLExmLgVHbI5DlTxWntjceFmUl/exec';
+  const submitOrderBtn = document.getElementById('submitOrderBtn');
+  const formStatus = document.getElementById('formStatus');
+
+  submitOrderBtn.addEventListener('click', async () => {
+    const name = document.getElementById('customerName').value.trim();
+    const phone = document.getElementById('customerPhone').value.trim();
+
+    formStatus.className = 'form-status';
+    formStatus.textContent = '';
+
+    if (!chosenPackage) {
+      formStatus.classList.add('error');
+      formStatus.textContent = 'اختاري باقة أولاً';
+      return;
+    }
+    if (!name || !phone) {
+      formStatus.classList.add('error');
+      formStatus.textContent = 'عبّي الاسم ورقم الجوال';
+      return;
+    }
+
+    const originalText = submitOrderBtn.textContent;
+    submitOrderBtn.textContent = 'جارٍ التسجيل...';
+    submitOrderBtn.disabled = true;
+
+    const payload = {
+      name,
+      phone,
+      package: chosenPackage.name,
+      price: chosenPackage.price,
+      receiptName: attachedFileName || '',
+      receiptBase64: receiptDataUrl ? receiptDataUrl.split(',')[1] : '',
+      receiptType: receiptDataUrl ? receiptDataUrl.split(';')[0].replace('data:', '') : ''
+    };
+
+    try {
+      await fetch(SHEET_WEBAPP_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify(payload)
+      });
+      submitOrderBtn.textContent = 'تم التسجيل ✓';
+      submitOrderBtn.classList.add('success');
+      formStatus.classList.add('success');
+      formStatus.textContent = 'وصلني طلبك، تقدرين كمان ترسلين الإيصال عبر واتساب للتأكيد السريع.';
+    } catch (err) {
+      submitOrderBtn.textContent = originalText;
+      submitOrderBtn.disabled = false;
+      formStatus.classList.add('error');
+      formStatus.textContent = 'صار خطأ بالتسجيل، جربي مرة ثانية أو أرسلي عبر واتساب مباشرة.';
+    }
+  });
+</script>
+
+</body>
+</html>
