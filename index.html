@@ -14,14 +14,7 @@
     --walnut:#7D7369;
     --coffee:#251F1B;
     --coffee-soft:#3A332D;
-    --nd-dark:#0B2528;
     --nd-green:#3B8750;
-    --nd-vision:#7C5D21;
-    --nd-courage:#607C4F;
-    --nd-determination:#971A4D;
-    --nd-authenticity:#5ABA1C;
-    --nd-generosity:#0050AF;
-    --nd-giving:#6565E0;
   }
 
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -94,145 +87,6 @@
     text-align:center;
     margin-bottom:56px;
   }
-  .discount-badge{
-    display:inline-block;
-    background:var(--nd-green);
-    color:var(--paper);
-    font-size:0.72rem;
-    font-weight:600;
-    padding:4px 10px;
-    border-radius:12px;
-    margin-top:12px;
-  }
-  .old-price{
-    color:var(--walnut);
-    text-decoration:line-through;
-    font-size:0.95rem;
-    opacity:0.75;
-  }
-
-  .nd-banner{
-    max-width:1120px;
-    margin:0 auto 8px;
-    background:var(--nd-dark);
-    background-image:
-      linear-gradient(rgba(59,135,80,0.18) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(59,135,80,0.18) 1px, transparent 1px);
-    background-size:28px 28px;
-    border-radius:14px;
-    padding:32px 32px;
-    position:relative;
-    overflow:hidden;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:20px;
-    flex-wrap:wrap;
-  }
-  .nd-banner .tag-96{
-    position:absolute;
-    top:18px; left:18px;
-    background:var(--nd-green);
-    color:var(--paper);
-    font-weight:700;
-    font-size:1.15rem;
-    padding:6px 14px;
-    border-radius:4px;
-    z-index:1;
-  }
-  .nd-banner .corner-label{
-    position:absolute;
-    top:22px; right:24px;
-    color:rgba(250,247,242,0.35);
-    font-size:0.68rem;
-    letter-spacing:1.5px;
-    z-index:1;
-  }
-  .nd-banner-text{ position:relative; z-index:1; color:var(--paper); margin-top:30px; }
-  .nd-banner-text .slogan{
-    font-size:1.2rem;
-    font-weight:700;
-    display:block;
-  }
-  .nd-banner-text .sub{
-    font-size:0.86rem;
-    color:rgba(250,247,242,0.7);
-    margin-top:4px;
-    display:block;
-  }
-  .nd-banner-cta{
-    position:relative;
-    z-index:1;
-    background:var(--nd-green);
-    color:var(--paper);
-    border:none;
-    padding:12px 22px;
-    border-radius:8px;
-    font-family:'IBM Plex Sans Arabic', sans-serif;
-    font-size:0.9rem;
-    font-weight:700;
-    cursor:pointer;
-    white-space:nowrap;
-    transition:transform 0.15s ease, background 0.2s ease;
-    margin-top:30px;
-  }
-  .nd-banner-cta:hover{ transform:translateY(-2px); background:#2f6f41; }
-
-  .countdown{
-    display:flex;
-    gap:10px;
-    margin-top:16px;
-  }
-  .cd-unit{
-    background:rgba(250,247,242,0.08);
-    border:1px solid rgba(250,247,242,0.18);
-    border-radius:8px;
-    padding:8px 12px;
-    text-align:center;
-    min-width:56px;
-  }
-  .cd-num{
-    display:block;
-    font-size:1.3rem;
-    font-weight:700;
-    color:var(--paper);
-    font-variant-numeric:tabular-nums;
-  }
-  .cd-label{
-    display:block;
-    font-size:0.68rem;
-    color:rgba(250,247,242,0.6);
-    margin-top:2px;
-  }
-
-  .promo-caption{
-    display:block;
-    text-align:center;
-    font-size:0.85rem;
-    color:var(--nd-green);
-    font-weight:600;
-    height:1.4em;
-    margin:16px 0 4px;
-    opacity:0;
-    transform:translateY(4px);
-    transition:opacity 0.35s ease, transform 0.35s ease;
-  }
-  .promo-caption.show{ opacity:1; transform:translateY(0); }
-
-  .confetti-piece{
-    position:fixed;
-    top:-20px;
-    z-index:9999;
-    pointer-events:none;
-    border-radius:2px;
-    animation:confetti-fall linear forwards;
-  }
-  @keyframes confetti-fall{
-    to{
-      transform:translateY(105vh) rotate(540deg);
-      opacity:0.15;
-    }
-  }
   .section-head h2{
     font-size:1.9rem;
     font-weight:600;
@@ -286,8 +140,7 @@
   .card.unavailable ul li{
     opacity:0.6;
   }
-  .card.unavailable .price-row .amount,
-  .card.unavailable .old-price{
+  .card.unavailable .price-row .amount{
     opacity:0.55;
   }
 
@@ -708,40 +561,21 @@
   </header>
 
   <section class="packages" id="packages">
-    <div class="nd-banner">
-      <span class="tag-96">96</span>
-      <span class="corner-label">SAUDI NATIONAL DAY</span>
-      <div class="nd-banner-text">
-        <span class="slogan">عزّنا بطبعنا 🇸🇦</span>
-        <span class="sub">عرض اليوم الوطني — خصم يوصل لـ51% على الباقات</span>
-        <div class="countdown" id="countdown">
-          <div class="cd-unit"><span class="cd-num" id="cd-days">--</span><span class="cd-label">يوم</span></div>
-          <div class="cd-unit"><span class="cd-num" id="cd-hours">--</span><span class="cd-label">ساعة</span></div>
-          <div class="cd-unit"><span class="cd-num" id="cd-mins">--</span><span class="cd-label">دقيقة</span></div>
-          <div class="cd-unit"><span class="cd-num" id="cd-secs">--</span><span class="cd-label">ثانية</span></div>
-        </div>
-      </div>
-      <button class="nd-banner-cta" id="promoBtn" type="button">احتفلي معنا</button>
-    </div>
-    <span class="promo-caption" id="promoCaption">كل عام والمملكة وأهلها بخير 🌿</span>
-
-    <div class="section-head" style="margin-top:44px;">
+    <div class="section-head">
       <h2>الباقات</h2>
       <p>ثلاث مستويات، من التشخيص السريع إلى المتابعة الكاملة</p>
     </div>
 
     <div class="cards-grid">
 
-      <article class="card" data-name="التحليل والتشخيص" data-price="550 ريال">
+      <article class="card" data-name="التحليل والتشخيص" data-price="900 ريال">
         <span class="tier-label">تشخيص لمرة واحدة</span>
         <h3>التحليل والتشخيص</h3>
         <p class="subtitle">تقرير شامل + جلسة شرح</p>
         <div class="price-row">
-          <span class="old-price">900 ريال</span>
-          <span class="amount">550 ريال</span>
+          <span class="amount">900 ريال</span>
           <span class="unit">دفعة واحدة</span>
         </div>
-        <span class="discount-badge">وفري 39%</span>
         <p class="desc">مناسبة إذا تبين تفهمين وضع حسابك الحالي بالأرقام قبل أي التزام طويل.</p>
         <p class="includes-title">وش بسويه بعد ما تختارين هذي الباقة</p>
         <ul>
@@ -755,17 +589,15 @@
         <button class="select-btn">اختاري هذي الباقة</button>
       </article>
 
-      <article class="card unavailable" data-name="الإدارة والتطوير الشهري" data-price="1700 ريال / شهرياً">
+      <article class="card unavailable" data-name="الإدارة والتطوير الشهري" data-price="2800 ريال / شهرياً">
         <span class="badge unavailable-badge">اكتمل العدد</span>
         <span class="tier-label">متابعة شهرية</span>
         <h3>الإدارة والتطوير الشهري</h3>
         <p class="subtitle">استراتيجية + متابعة مستمرة</p>
         <div class="price-row">
-          <span class="old-price">2,800 ريال</span>
-          <span class="amount">1,700 ريال</span>
+          <span class="amount">2,800 ريال</span>
           <span class="unit">شهرياً</span>
         </div>
-        <span class="discount-badge">وفري 39%</span>
         <p class="desc">لعميل يبي متابعة مستمرة وتحسين تدريجي، مو تحليل لمرة وحدة وخلاص.</p>
         <p class="includes-title">وش بسويه بعد ما تختارين هذي الباقة</p>
         <ul>
@@ -779,17 +611,15 @@
         <button class="select-btn" disabled>غير متاحة حالياً</button>
       </article>
 
-      <article class="card unavailable" data-name="الإدارة الشاملة" data-price="2700 ريال / شهرياً">
+      <article class="card unavailable" data-name="الإدارة الشاملة" data-price="5500 ريال / شهرياً">
         <span class="badge unavailable-badge">اكتمل العدد</span>
         <span class="tier-label">إدارة شاملة</span>
         <h3>الإدارة الشاملة</h3>
         <p class="subtitle">استشارة استراتيجية دائمة</p>
         <div class="price-row">
-          <span class="old-price">5,500 ريال</span>
-          <span class="amount">2,700 ريال</span>
+          <span class="amount">5,500 ريال</span>
           <span class="unit">شهرياً</span>
         </div>
-        <span class="discount-badge">وفري 51%</span>
         <p class="desc">لعميل يبي حد يفكر له استراتيجياً باستمرار ويتابع القرارات الكبيرة أول بأول.</p>
         <p class="includes-title">وش بسويه بعد ما تختارين هذي الباقة</p>
         <ul>
@@ -977,36 +807,6 @@
     }
     whatsappBtn.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
   }
-  // National Day 96 celebration
-  const promoBtn = document.getElementById('promoBtn');
-  const promoCaption = document.getElementById('promoCaption');
-  const confettiColors = ['#3B8750', '#7C5D21', '#5ABA1C', '#FAF7F2'];
-  let captionTimeout;
-
-  function launchConfetti() {
-    const pieceCount = 46;
-    for (let i = 0; i < pieceCount; i++) {
-      const piece = document.createElement('div');
-      piece.className = 'confetti-piece';
-      const size = 6 + Math.random() * 6;
-      piece.style.width = size + 'px';
-      piece.style.height = (size * 0.4) + 'px';
-      piece.style.left = Math.random() * 100 + 'vw';
-      piece.style.background = confettiColors[Math.floor(Math.random() * confettiColors.length)];
-      piece.style.animationDuration = (2.2 + Math.random() * 1.6) + 's';
-      piece.style.transform = `rotate(${Math.random() * 360}deg)`;
-      document.body.appendChild(piece);
-      setTimeout(() => piece.remove(), 4200);
-    }
-  }
-
-  promoBtn.addEventListener('click', () => {
-    launchConfetti();
-    promoCaption.classList.add('show');
-    clearTimeout(captionTimeout);
-    captionTimeout = setTimeout(() => promoCaption.classList.remove('show'), 3200);
-  });
-
   // Interactive step tracker
   const step1 = document.getElementById('step1');
   const step2 = document.getElementById('step2');
@@ -1036,38 +836,6 @@
 
   confirmTransfer.addEventListener('change', updateSteps);
   updateSteps();
-
-  // Live countdown to National Day 96 (23 Sep 2026)
-  const targetDate = new Date('2026-09-23T00:00:00+03:00').getTime();
-  const cdDays = document.getElementById('cd-days');
-  const cdHours = document.getElementById('cd-hours');
-  const cdMins = document.getElementById('cd-mins');
-  const cdSecs = document.getElementById('cd-secs');
-
-  function pad(n) { return String(n).padStart(2, '0'); }
-
-  function tickCountdown() {
-    const now = Date.now();
-    const diff = targetDate - now;
-    if (diff <= 0) {
-      cdDays.textContent = '00';
-      cdHours.textContent = '00';
-      cdMins.textContent = '00';
-      cdSecs.textContent = '00';
-      return;
-    }
-    const days = Math.floor(diff / 86400000);
-    const hours = Math.floor((diff % 86400000) / 3600000);
-    const mins = Math.floor((diff % 3600000) / 60000);
-    const secs = Math.floor((diff % 60000) / 1000);
-    cdDays.textContent = pad(days);
-    cdHours.textContent = pad(hours);
-    cdMins.textContent = pad(mins);
-    cdSecs.textContent = pad(secs);
-  }
-
-  tickCountdown();
-  setInterval(tickCountdown, 1000);
 
   // Submit order to Google Sheet (via Google Apps Script Web App)
   const SHEET_WEBAPP_URL = 'https://script.google.com/macros/s/AKfycbz-jKX_LGPmioOs4vWHtO_oiq5L95bykZ8jCROchxnLExmLgVHbI5DlTxWntjceFmUl/exec';
