@@ -129,7 +129,7 @@
   #paths{ padding:30px 0 40px; scroll-margin-top:20px; }
   .paths-grid{
     display:grid;
-    grid-template-columns:repeat(3, 1fr);
+    grid-template-columns:repeat(2, 1fr);
     gap:24px;
   }
   .path-card{
@@ -647,7 +647,7 @@
     <div class="stats">
       <div class="stat"><b>+5</b><span>سنوات خبرة</span></div>
       <div class="stat"><b data-stat="courses">3</b><span>دورات</span></div>
-      <div class="stat"><b data-stat="consult">3</b><span>باقات استشارية</span></div>
+      <div class="stat"><b data-stat="consult">2</b><span>باقات استشارية</span></div>
     </div>
 
     <a class="btn-primary" href="#paths">عرض الخيارات</a>
@@ -670,13 +670,20 @@
 
         <button class="path-card" type="button" data-path="consult" aria-expanded="false">
           <span class="num">02</span>
-          <h3>الاستشارات والتعاقد الشهري</h3>
-          <p class="path-sub">تحليل وتوجيه لمشروعك أو حسابات السوشيال ميديا</p>
-          <span class="path-foot"><span>3 باقات</span><span class="arrow">←</span></span>
+          <h3>الاستشارات</h3>
+          <p class="path-sub">جلسات تحليل وتوجيه، لحسابك الشخصي أو لمشروعك</p>
+          <span class="path-foot"><span>2 باقتين</span><span class="arrow">←</span></span>
+        </button>
+
+        <button class="path-card" type="button" data-path="manage" aria-expanded="false">
+          <span class="num">03</span>
+          <h3>الإدارة الشهرية</h3>
+          <p class="path-sub">تعاقد شهري: تنفيذ ومتابعة مستمرة، مو جلسة وتخلص</p>
+          <span class="path-foot"><span>2 باقتين</span><span class="arrow">←</span></span>
         </button>
 
         <button class="path-card" type="button" data-path="digital" aria-expanded="false">
-          <span class="num">03</span>
+          <span class="num">04</span>
           <h3>الخدمات الرقمية</h3>
           <p class="path-sub">أدوات جاهزة للاستخدام، مثل حاسبة التسعير الذكية</p>
           <span class="path-foot"><span>أدوات جاهزة</span><span class="arrow">←</span></span>
@@ -807,34 +814,55 @@
       label: 'الاستشارات',
       kind: 'باقة استشارية',
       cta: 'حجز الباقة',
-      title: 'الاستشارات والتعاقد الشهري',
-      sub: 'ثلاث باقات، من التحليل والتوجيه إلى الإدارة شبه المتكاملة',
+      title: 'الاستشارات',
+      sub: 'جلسات رأي وتحليل وتوجيه عملي. الفايدة منها تعتمد على تطبيقك لما نتفق عليه',
       items: [
         {
-          id: 's1', name: 'باقة التحليل والتوجيه لايت',
-          price: 550,
+          id: 's1', name: 'استشارة شخصية',
+          price: 280,
+          desc: 'لصانعات المحتوى والفريلانسرز وأصحاب البراند الشخصي.',
           features: [
             'جلستان خلال أسبوعين',
             'مدة كل جلسة 40 دقيقة',
-            'تحليل المشروع أو حسابات السوشيال ميديا',
+            'تحليل حسابك الشخصي على السوشيال ميديا',
             'نصائح وتوجيهات عملية'
           ]
         },
         {
-          id: 's2', closed: 'غير متاحة حاليًا', name: 'باقة التحليل والتوجيه بلس',
+          id: 's2', name: 'استشارة مشروع',
+          price: 550,
+          desc: 'لأصحاب المشاريع والبزنس، قائم أو بيبدأ.',
+          features: [
+            'جلستان خلال أسبوعين',
+            'مدة كل جلسة 40 دقيقة',
+            'تحليل المشروع وحساباته على السوشيال ميديا',
+            'نصائح وتوجيهات عملية'
+          ]
+        }
+      ]
+    },
+    manage: {
+      label: 'الإدارة الشهرية',
+      kind: 'إدارة شهرية',
+      cta: 'حجز الباقة',
+      title: 'الإدارة الشهرية',
+      sub: 'تعاقد شهري: ما هو جلسة وتخلص، نشتغل سوا على حسابك أو مشروعك طول الشهر، تنفيذ ومتابعة مستمرة',
+      items: [
+        {
+          id: 'm1', closed: 'غير متاحة حاليًا', name: 'الإدارة الشهرية بلس',
           price: 1500,
           features: [
-            'كل خدمات باقة لايت',
+            'كل خدمات الاستشارة (شخصية أو مشروع)',
             'تجهيز المحتوى',
             'متابعة لمدة شهر'
           ]
         },
         {
-          id: 's3', closed: 'غير متاحة حاليًا', name: 'باقة التحليل والتوجيه برو',
+          id: 'm2', closed: 'غير متاحة حاليًا', name: 'الإدارة الشهرية برو',
           price: 3700,
           features: [
             'كل خدمات باقة بلس',
-            'استراتيجية تسويق متكاملة للبزنس أو المشروع',
+            'استراتيجية تسويق متكاملة للحساب أو المشروع',
             'إدارة شبه متكاملة',
             'حد أقصى منصتان'
           ]
